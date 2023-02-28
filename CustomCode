@@ -1,0 +1,71 @@
+--//Variables
+local players = game:GetService("Players")
+local plr = players.LocalPlayer
+
+--//GUI
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "Admin GUI"
+ScreenGui.Parent = game.CoreGui
+
+local Frame = Instance.new("Frame")
+Frame.Name = "Admin Frame"
+Frame.Size = UDim2.new(0, 200, 0, 300)
+Frame.Position = UDim2.new(0, -200, 0.5, -150)
+Frame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Frame.BorderSizePixel = 0
+Frame.Parent = ScreenGui
+
+local SlideIn = Instance.new("UITransition")
+SlideIn.Parent = Frame
+SlideIn.Time = 0.5
+SlideIn.EasingStyle = Enum.EasingStyle.Quint
+SlideIn.EasingDirection = Enum.EasingDirection.Out
+
+local SlideOut = Instance.new("UITransition")
+SlideOut.Parent = Frame
+SlideOut.Time = 0.5
+SlideOut.EasingStyle = Enum.EasingStyle.Quint
+SlideOut.EasingDirection = Enum.EasingDirection.In
+
+local OpenButton = Instance.new("TextButton")
+OpenButton.Name = "Open Button"
+OpenButton.Size = UDim2.new(0, 50, 0, 50)
+OpenButton.Position = UDim2.new(0, 0, 0.5, -25)
+OpenButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OpenButton.BorderSizePixel = 0
+OpenButton.Text = ">"
+OpenButton.Font = Enum.Font.SourceSans
+OpenButton.TextColor3 = Color3.fromRGB(50, 50, 50)
+OpenButton.TextSize = 24
+OpenButton.Parent = Frame
+
+local Credit = Instance.new("TextLabel")
+Credit.Name = "Credit"
+Credit.Size = UDim2.new(1, 0, 0, 50)
+Credit.Position = UDim2.new(0, 0, 1, 0)
+Credit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credit.BorderSizePixel = 0
+Credit.Text = "Created by Richardkaskey6678"
+Credit.Font = Enum.Font.SourceSans
+Credit.TextColor3 = Color3.fromRGB(50, 50, 50)
+Credit.TextSize = 18
+Credit.Parent = Frame
+
+local LoginPanel = Instance.new("Frame")
+LoginPanel.Name = "Login Panel"
+LoginPanel.Size = UDim2.new(1, 0, 1, 0)
+LoginPanel.Position = UDim2.new(0, 0, 0, 0)
+LoginPanel.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+LoginPanel.BorderSizePixel = 0
+LoginPanel.Visible = false
+LoginPanel.Parent = Frame
+
+local LoginTitle = Instance.new("TextLabel")
+LoginTitle.Name = "Login Title"
+LoginTitle.Size = UDim2.new(1, 0, 0, 50)
+LoginTitle.Position = UDim2.new(0, 0, 0, 0)
+LoginTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LoginTitle.BorderSizePixel = 0
+LoginTitle.Text = "Please enter the login code."
+LoginTitle.Font = Enum.Font.SourceSans
+LoginTitle.TextColor
